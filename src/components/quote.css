@@ -1,5 +1,5 @@
 body {
-    background-color: antiquewhite;
+    background-color: rgb(224, 146, 0);
   }
   
   .homeContainer {
@@ -33,7 +33,17 @@ body {
     place-content: center;
     margin-left: 5%;
     padding: 40px 0;
-    background-color: rgb(70, 134, 191);
+    background-color: rgb(2, 48, 88);
     color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(70, 134, 191);
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: rgb(224, 146, 0);
   }
   
