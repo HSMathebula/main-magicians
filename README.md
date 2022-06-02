@@ -13,7 +13,7 @@
 
 ### Getting Started
 - clone the repository by running\
-    `git clone https://github.com/GOlivierNation/math-magicians.git`
+    `git clone https://github.com/HSMathebula/main-magicians.git`
 - navigate to the folder\
     `cd math-magicians`
 - Install packages\
