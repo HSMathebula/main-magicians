@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './home.css';
 
 const Home = () => (
   <div className="homeContainer">
@@ -17,7 +17,6 @@ const Home = () => (
           velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident,
           sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <br />
           <br />
           <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
