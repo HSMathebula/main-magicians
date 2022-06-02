@@ -39,7 +39,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/HSMathebula/LeaderBoard/issues).
+Feel free to check the [issues page](https://github.com/HSMathebula/main-magicians/issues).
 
 ## Show your support
 
