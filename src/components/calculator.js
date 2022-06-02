@@ -4,10 +4,6 @@ import './home.css';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { total: null, next: null, operation: null };
-  // }
   const [state, setState] = useState({
     total: 0,
     next: null,
