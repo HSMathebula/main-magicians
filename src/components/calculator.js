@@ -58,7 +58,10 @@ class Calculator extends React.Component {
           </div>
         </div>
         <div className="footer">
-          &copy; Developed by HS Mathebula
+          <p>
+            Developed by
+            <a href="https://github.com/HSMathebula/main-magicians"> HS Mathebula</a>
+          </p>
         </div>
       </div>
     );

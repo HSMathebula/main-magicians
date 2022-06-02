@@ -31,7 +31,10 @@ const Home = () => (
       </div>
     </div>
     <div className="footer">
-      &copy; All right reserved By: Olivier
+      <p>
+        Developed by
+        <a href="https://github.com/HSMathebula/main-magicians"> HS Mathebula</a>
+      </p>
     </div>
   </div>
 );
