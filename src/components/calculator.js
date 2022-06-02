@@ -28,7 +28,7 @@ class Calculator extends React.Component {
       <div className="homeContainer">
         <div className="calculatorContainer">
           <div className="desc">
-            <h3> Lets do some math! </h3>
+            <h3> Small calculater with big SOLUTIONS! </h3>
           </div>
           <div className="container">
             <div className="screen">
