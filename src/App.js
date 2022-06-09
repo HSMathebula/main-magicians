@@ -11,7 +11,7 @@ import Quote from './components/quote';
 const App = () => (
   <>
     <Header />
-    
+
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/calculator" element={<Calculator />} />
