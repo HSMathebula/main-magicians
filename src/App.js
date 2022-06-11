@@ -1,23 +1,25 @@
-import React from 'react';
+import { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/home';
-import './index.css';
+import CalculatorPage from './pages/CalculatorPage';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import Quote from './pages/Quote';
 import './App.css';
 
-import Calculator from './components/calculator';
-import Header from './components/header';
-import Quote from './components/quote';
-
-const App = () => (
-  <>
-    <Header />
-
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/calculator" element={<Calculator />} />
-      <Route path="/Quote" element={<Quote />} />
-    </Routes>
-  </>
-);
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/quote" element={<Quote />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+    );
+  }
+}
 
 export default App;

@@ -1,70 +1,42 @@
 import React, { useState } from 'react';
-import './calculator.css';
-import './home.css';
+import './Calculator.css';
+import CalcButton from './CalcButton';
+import Display from './Display';
 import calculate from '../logic/calculate';
 
-const Calculator = () => {
-  const [state, setState] = useState({
+export default function Calculator() {
+  const [calculatorObj, setCalculatorObj] = useState({
     total: 0,
     next: null,
     operation: null,
   });
 
-  const updateDetails = (e) => {
-    const newObj = calculate(state, e.target.textContent);
-    setState(newObj);
+  const handleButtonPress = (e) => {
+    setCalculatorObj((prev) => ({ ...prev, ...calculate(prev, e.target.textContent) }));
   };
 
-  const { next, operation, total } = state;
-  const op = operation === '%' ? 'mod' : operation;
-  let result = '';
-  if (total) {
-    result = `${total} ${op || ''} ${next || ''}`;
-  } else if (next) {
-    result = `${next} ${op || ''}`;
-  }
-
   return (
-    <div className="homeContainer">
-      <div className="calculatorContainer">
-        <div className="desc">
-          <h3> Small calculater with big SOLUTIONS! </h3>
-        </div>
-        <div className="container">
-          <div className="screen">
-            {result || 0}
-          </div>
-          <div className="buttons">
-            <button onClick={updateDetails} type="button">AC</button>
-            <button onClick={updateDetails} type="button">+/-</button>
-            <button onClick={updateDetails} type="button">%</button>
-            <button onClick={updateDetails} className="orange" type="button">&divide;</button>
-            <button onClick={updateDetails} type="button">7</button>
-            <button onClick={updateDetails} type="button">8</button>
-            <button onClick={updateDetails} type="button">9</button>
-            <button onClick={updateDetails} className="orange" type="button">x</button>
-            <button onClick={updateDetails} type="button">4</button>
-            <button onClick={updateDetails} type="button">5</button>
-            <button onClick={updateDetails} type="button">6</button>
-            <button onClick={updateDetails} className="orange" type="button">-</button>
-            <button onClick={updateDetails} type="button">1</button>
-            <button onClick={updateDetails} type="button">2</button>
-            <button onClick={updateDetails} type="button">3</button>
-            <button onClick={updateDetails} className="orange" type="button">+</button>
-            <button onClick={updateDetails} className="double" type="button">0</button>
-            <button onClick={updateDetails} type="button">.</button>
-            <button onClick={updateDetails} className="orange" type="button">=</button>
-          </div>
-        </div>
-      </div>
-      <div className="footer">
-        <p>
-          Developed by
-          <a href="https://github.com/HSMathebula/main-magicians"> HS Mathebula</a>
-        </p>
-      </div>
+    <div className="calculator parent">
+      <Display calculatorObject={calculatorObj} />
+      <CalcButton buttonCharacter="AC" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="+/-" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="%" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="&divide;" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="7" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="8" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="9" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="x" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="4" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="5" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="6" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="-" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="1" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="2" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="3" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="+" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="." handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="=" handleButtonPress={handleButtonPress} />
+      <CalcButton buttonCharacter="0" handleButtonPress={handleButtonPress} />
     </div>
   );
-};
-
-export default Calculator;
+}
